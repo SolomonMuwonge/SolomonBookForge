@@ -1,0 +1,78 @@
+
+/* Custom CSS for that "Book" feel */
+
+/* The Paper Effect: Makes the editor look like a real page */
+.paper-container {
+  display: flex;
+  justify-content: center;
+  padding: 80px 20px;
+  flex: 1; 
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+  background: transparent;
+}
+
+.paper {
+  width: 100%;
+  max-width: 800px;
+  min-height: 1000px; 
+  height: max-content;
+  padding: 120px 100px;
+  box-shadow: 0 40px 100px -20px rgba(0,0,0,0.08);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  transition: background-color 0.8s cubic-bezier(0.4, 0, 0.2, 1), color 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Updated for contentEditable */
+.paper [contenteditable] {
+  display: block;
+  width: 100%;
+  border: none !important;
+  outline: none !important;
+  background: transparent !important;
+  font-size: 1.25rem;
+  line-height: 2;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  min-height: 500px;
+}
+
+.paper [contenteditable] div {
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 640px) {
+  .paper {
+    padding: 60px 20px;
+    min-height: 800px;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.05); 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.1); 
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
