@@ -1,7 +1,3 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
-
 # SolomonBookForge
 
 SolomonBookForge is an AI-powered book creation platform that allows users to **generate, read, and download books** effortlessly. Powered by AI, it can generate chapters based on your title, genre, and description, letting you craft stories or documents with minimal effort.
